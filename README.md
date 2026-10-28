@@ -21,4 +21,7 @@ main():
 printMenu():
 
 guesser():
-  
+
+getmean() was used also
+only need one class
+really all the classes would only need a constructer
