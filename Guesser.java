@@ -65,12 +65,56 @@ public static void humanGuesser(){
     
     }
 
-    else {
+    else{
       System.out.println("correct! you got it!");
     
     }
     
   }
+
+}
+
+// computerGuesser function
+
+public static void computerGuesser(){
+  int lowerBound = 1;
+  int upperBound = 100;	  
+  boolean correct = false;
+
+  while (!correct){
+    int guess = (lowerBound + upperBound) / 2;
+
+    System.out.println("my guess is " + guess);
+
+    System.out.println("H) too high!");
+    System.out.println("L) too low!");
+    System.out.println("H) correct! you got it!");
+    System.out.println("enter a response: ");
+    String response = input.next().toUpperCase();
+
+    if (response.equals("L")){
+    lowerBound = guess + 1;
+
+    }
+
+    else if (response.equals("H")){
+    upperBound = guess - 1;
+
+    }
+
+    else if (response.equals("C")){
+    correct = true;
+
+    }
+
+    else{
+      System.out.println("Please enter H, L, or C");
+    
+    }
+  
+  }
+
+  System.out.println("yay! i guessed it!")
 
 }
 
