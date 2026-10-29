@@ -45,4 +45,33 @@ public static void main(String[] args){
 
 // humanGuesser function
 
+public static void humanGuesser(){
+  int secretNumber = (int) (Math.random() * 100) + 1;
+  int guess = 0;
+
+  Scanner input = new Scanner(System.in);
+
+  while (guess != secretNumber){
+    System.out.println("enter your guess 1-100: ");
+    guess = input.nextInt();
+
+    if (guess < secretNumber){
+      System.out.println("too low!");
+
+    }
+
+    else if (guess > secretNumber){
+      System.out.println("too high!");
+    
+    }
+
+    else {
+      System.out.println("correct! you got it!");
+    
+    }
+    
+  }
+
+}
+
 
