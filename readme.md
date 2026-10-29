@@ -46,7 +46,7 @@ humanGuesser():
     else:
       print "correct! you got it!"
 
-    return to menu
+  return to menu
 ```
 # computerGuesser function
 ```
@@ -71,7 +71,7 @@ computerGuesser():
     else if response = "c":
       correct = true
 
-return to menu
+  return to menu
 ```
   
   
