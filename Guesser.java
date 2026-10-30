@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+public class Guesser{
+  static Scanner input = new Scanner(System.in);
 
   // menu function
 
@@ -8,7 +10,6 @@ import java.util.Scanner;
     System.out.println("1) human guesser");
     System.out.println("2) computer guesser");
 
-    Scanner input = new Scanner(System.in);
     System.out.println("please enter number 0-2:");
     int choice = input.nextInt();
 
@@ -35,7 +36,7 @@ import java.util.Scanner;
       }
 
       else if (choice != 0){
-        System.out.println("ERROR: Invaild choice!");
+        System.out.println("ERROR: Invalid choice!");
 
       }
 
@@ -48,8 +49,6 @@ import java.util.Scanner;
   public static void humanGuesser(){
     int secretNumber = (int) (Math.random() * 100) + 1;
     int guess = 0;
-
-    Scanner input = new Scanner(System.in);
 
     while (guess != secretNumber){
       System.out.println("enter your guess 1-100: ");
@@ -88,7 +87,7 @@ import java.util.Scanner;
 
       System.out.println("H) too high!");
       System.out.println("L) too low!");
-      System.out.println("H) correct! you got it!");
+      System.out.println("C) correct! you got it!");
       System.out.println("enter a response: ");
       String response = input.next().toUpperCase();
 
@@ -114,8 +113,8 @@ import java.util.Scanner;
     
     }
 
-    System.out.println("yay! i guessed it!")
+    System.out.println("yay! i guessed it!");
 
   }
 
-
+}
