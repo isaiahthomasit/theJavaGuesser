@@ -6,11 +6,12 @@ public class Guesser{
   // menu function
 
   public static int menu(){
+    System.out.println(" ");
     System.out.println("0) exit");
     System.out.println("1) human guesser");
-    System.out.println("2) computer guesser");
+    System.out.println("2) computer guesser\n");
 
-    System.out.println("please enter number 0-2:");
+    System.out.print("please enter number 0-2: ");
     int choice = input.nextInt();
 
     return choice;
@@ -51,7 +52,7 @@ public class Guesser{
     int guess = 0;
 
     while (guess != secretNumber){
-      System.out.println("enter your guess 1-100: ");
+      System.out.print("enter your guess 1-100: ");
       guess = input.nextInt();
 
       if (guess < secretNumber){
@@ -83,12 +84,14 @@ public class Guesser{
     while (!correct){
       int guess = (lowerBound + upperBound) / 2;
 
+      System.out.println(" ");
       System.out.println("my guess is " + guess);
+      System.out.println(" ");
 
       System.out.println("H) too high!");
       System.out.println("L) too low!");
-      System.out.println("C) correct! you got it!");
-      System.out.println("enter a response: ");
+      System.out.println("C) correct! you got it!\n");
+      System.out.print("enter a response: ");
       String response = input.next().toUpperCase();
 
       if (response.equals("L")){
